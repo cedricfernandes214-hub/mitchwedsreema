@@ -1,17 +1,48 @@
+// Mark JS as available so scroll-reveal styles only apply when this script runs
+document.documentElement.classList.add('js')
+
 // Countdown to the Nuptial Mass — 4pm IST on 14 November 2026
 const target = new Date('2026-11-14T16:00:00+05:30').getTime()
 const units = Object.fromEntries(
   [...document.querySelectorAll('#countdown [data-unit]')].map((el) => [el.dataset.unit, el])
 )
+const pad = (n) => String(n).padStart(2, '0')
+
+function setUnit(el, value) {
+  if (el.textContent === value) return
+  el.textContent = value
+  el.classList.remove('tick')
+  void el.offsetWidth // restart the animation
+  el.classList.add('tick')
+}
 
 function tick() {
   const diff = Math.max(0, target - Date.now())
-  units.d.textContent = Math.floor(diff / 86400000)
-  units.h.textContent = Math.floor((diff / 3600000) % 24)
-  units.m.textContent = Math.floor((diff / 60000) % 60)
+  setUnit(units.d, String(Math.floor(diff / 86400000)))
+  setUnit(units.h, pad(Math.floor((diff / 3600000) % 24)))
+  setUnit(units.m, pad(Math.floor((diff / 60000) % 60)))
+  setUnit(units.s, pad(Math.floor((diff / 1000) % 60)))
 }
 tick()
-setInterval(tick, 30000)
+setInterval(tick, 1000)
+
+// Gentle scroll reveal
+const reveals = document.querySelectorAll('.reveal')
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue
+        entry.target.classList.add('in')
+        io.unobserve(entry.target)
+      }
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  )
+  reveals.forEach((el) => io.observe(el))
+} else {
+  reveals.forEach((el) => el.classList.add('in'))
+}
 
 // RSVP via Netlify Forms (AJAX)
 const form = document.getElementById('rsvp-form')
