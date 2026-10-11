@@ -409,6 +409,27 @@ footer .small { font-size: 2.4rem; color: var(--ink); text-transform: none; lett
 .portrait { transition: transform 0.5s ease; }
 .portrait:hover { transform: rotate(0deg); }
 
+/* Falling petals background */
+.petals { position: fixed; inset: 0; z-index: 5; pointer-events: none; overflow: hidden; }
+.petal {
+  position: absolute;
+  top: -8%;
+  left: var(--x);
+  width: var(--s);
+  height: calc(var(--s) * 1.35);
+  background: var(--c);
+  opacity: 0;
+  border-radius: 80% 0 80% 0;
+  animation: petal-fall var(--t) linear var(--delay) infinite;
+}
+@keyframes petal-fall {
+  0%   { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 0.55; }
+  50%  { transform: translate3d(var(--drift), 55vh, 0) rotate(160deg); }
+  90%  { opacity: 0.45; }
+  100% { transform: translate3d(calc(var(--drift) * -0.4), 110vh, 0) rotate(340deg); opacity: 0; }
+}
+
 /* Gentle scroll reveal (only active when JS adds .js to <html>) */
 .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.9s ease, transform 0.9s ease; }
 .js .reveal.in { opacity: 1; transform: none; }

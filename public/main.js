@@ -1,6 +1,25 @@
 // Mark JS as available so scroll-reveal styles only apply when this script runs
 document.documentElement.classList.add('js')
 
+// Falling petals background (skipped if the visitor prefers reduced motion)
+const petals = document.getElementById('petals')
+if (petals && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const colours = ['#f3c9d5', '#e9a9bf', '#fbf7ea', '#c9d0a8', '#b7bf93'] // blush, rose, frangipani cream, olive
+  const count = innerWidth < 600 ? 10 : 18
+  const rand = (min, max) => min + Math.random() * (max - min)
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement('span')
+    p.className = 'petal'
+    p.style.setProperty('--x', rand(0, 100) + 'vw')
+    p.style.setProperty('--s', rand(8, 16) + 'px')
+    p.style.setProperty('--c', colours[i % colours.length])
+    p.style.setProperty('--t', rand(14, 26) + 's')
+    p.style.setProperty('--delay', -rand(0, 26) + 's') // negative = already mid-fall on load
+    p.style.setProperty('--drift', rand(-90, 90) + 'px')
+    petals.appendChild(p)
+  }
+}
+
 // Countdown to the Nuptial Mass — 4pm IST on 14 November 2026
 const target = new Date('2026-11-14T16:00:00+05:30').getTime()
 const units = Object.fromEntries(
