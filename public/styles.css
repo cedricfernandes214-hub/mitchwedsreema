@@ -23,6 +23,15 @@ body {
 }
 
 .script { font-family: "Pinyon Script", cursive; font-weight: 400; }
+.mission {
+  font-family: "Jost", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 0.32em;
+  font-size: 0.72rem;
+  color: var(--olive);
+  margin: 0 0 1rem;
+}
+
 .eyebrow {
   font-family: "Jost", sans-serif;
   text-transform: uppercase;
