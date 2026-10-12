@@ -9,6 +9,10 @@
   --line: rgba(122, 129, 96, 0.35);
 }
 
+.hide {
+  display: none !important;
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
