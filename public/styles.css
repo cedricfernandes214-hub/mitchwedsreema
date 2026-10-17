@@ -83,10 +83,13 @@ h2 {
   padding: 3rem 1.5rem;
 }
 .hero-art img {
+   border-radius: 8px;
+    box-shadow: 0 0 15px 5px rgba(250, 247, 240, 0.7);
+    border: none;
   width: 100%;
   height: auto;
   display: block;
-  mix-blend-mode: multiply;
+ /*  mix-blend-mode: multiply; */
   animation: rise 1.4s ease-out both, float 9s 1.4s ease-in-out infinite;
 }
 .hero-text { text-align: center; animation: rise 1.4s 0.25s ease-out both; }
