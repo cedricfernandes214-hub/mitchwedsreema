@@ -14,6 +14,11 @@
   display: none !important;
 }
 
+.margin-top-bottom
+{
+    margin: 1.5rem 0px 2rem;
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
