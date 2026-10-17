@@ -2,6 +2,7 @@
   --paper: #f6f4ea;
   --paper-deep: #eae9d8;
   --ink: #2f3328;
+  --pink: #e07b83;
   --muted: #6b705c;
   --gold: #a89a62;
   --olive: #7a8160;
@@ -72,7 +73,20 @@ h2 {
 }
 .hero-text { text-align: center; animation: rise 1.4s 0.25s ease-out both; }
 h1 { margin: 0; line-height: 1; font-weight: 400; }
-h1 .script { display: block; font-size: clamp(4rem, 9vw, 6.5rem); color: var(--ink); }
+
+h1 .script {
+  display: block; 
+  font-size: clamp(4rem, 9vw, 6.5rem); 
+  color: var(--pink); 
+}
+
+h1 .surname {
+  display: block; 
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  color: var(--pink); 
+}
+
+
 h1 .amp {
   display: block;
   font-style: italic;
