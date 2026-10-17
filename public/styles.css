@@ -87,6 +87,13 @@ h1 .surname {
 }
 
 
+.parents  {
+  display: block; 
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  color: var(--olive); 
+}
+
+
 h1 .amp {
   display: block;
   font-style: italic;
