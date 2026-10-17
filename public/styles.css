@@ -51,6 +51,18 @@ body {
   color: var(--gold);
   margin: 0 0 1rem;
 }
+
+.parents p {
+  font-family: "Jost", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.32em;
+  font-size: 0.42rem;
+  color: var(--gold);
+  margin: 0 0 1rem;
+}
+
+
+
 .center { text-align: center; }
 h2 {
   text-align: center;
