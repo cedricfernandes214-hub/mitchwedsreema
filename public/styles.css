@@ -59,6 +59,10 @@ body {
   font-size: 0.42rem;
   color: var(--gold);
   margin: 0 0 1rem;
+  line-height: 19px;
+    font-size: 15px;
+    letter-spacing: 3px;
+  
 }
 
 
