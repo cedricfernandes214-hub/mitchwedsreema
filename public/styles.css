@@ -38,8 +38,10 @@ body {
     font-size: medium !important;
 }
 
-
-
+.link:hover {
+color: var(--paper);
+background: var(--ink);
+}
 
 .script { font-family: "Pinyon Script", cursive; font-weight: 400; }
 .surname { font-family: "Pinyon Script", cursive; font-weight: 400; }
