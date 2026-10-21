@@ -12,7 +12,7 @@
 
 /* Wedding invitation image above The Celebrations */
 .events-image {
-  width: min(100% - 32px, 680px);
+  width: min(100% - 32px, 480px);
   margin: 0 auto 38px;
   position: relative;
   overflow: hidden;
@@ -40,7 +40,7 @@
 /* Mobile adjustments */
 @media (max-width: 600px) {
   .events-image {
-    width: calc(100% - 28px);
+    width: min(100% - 28px, 480px);
     margin-bottom: 28px;
     border-radius: 3px;
   }
@@ -102,7 +102,7 @@ background: var(--ink);
 
 /* Wedding invitation image above The Celebrations */
 .events-image {
-  width: min(100% - 32px, 680px);
+  width: min(100% - 32px, 480px);
   margin: 0 auto 38px;
   position: relative;
   overflow: hidden;
@@ -130,7 +130,7 @@ background: var(--ink);
 /* Mobile adjustments */
 @media (max-width: 600px) {
   .events-image {
-    width: calc(100% - 28px);
+    width: min(100% - 28px, 480px);
     margin-bottom: 28px;
     border-radius: 3px;
   }
