@@ -216,13 +216,19 @@ h1 { margin: 0; line-height: 1; font-weight: 400; }
 h1 .script {
   display: block; 
   font-size: clamp(4rem, 9vw, 6.5rem); 
-  color: var(--ink); 
+  color: var(--olive-deep); 
 }
 
 h1 .surname {
   display: block; 
   font-size: clamp(2rem, 3vw, 3.5rem);
   color: var(--pink); 
+}
+
+
+.lede-par {
+letter-spacing: 0.1rem;
+    line-height: 1.7rem;
 }
 
 
