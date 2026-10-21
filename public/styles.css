@@ -32,6 +32,15 @@ body {
   line-height: 1.55;
 }
 
+.buttonstyle {
+    border: 1px solid;
+    padding: 25px;
+    font-size: medium !important;
+}
+
+
+
+
 .script { font-family: "Pinyon Script", cursive; font-weight: 400; }
 .surname { font-family: "Pinyon Script", cursive; font-weight: 400; }
 .mission {
